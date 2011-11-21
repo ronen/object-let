@@ -1,4 +1,4 @@
-module Let
+module ObjectLet
   module Object
     def let
       yield self

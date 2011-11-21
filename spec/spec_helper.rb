@@ -5,7 +5,7 @@ if RUBY_VERSION > "1.9"
 end
 
 require 'rspec'
-require 'let'
+require 'object-let'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.

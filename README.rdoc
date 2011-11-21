@@ -1,16 +1,16 @@
-= let
+= object-let
 
 Defines Object#let, which simply yields the object and returns the result.
 This idiom, familiar to Lisp programmers, can be handy to eliminate the need
 for an intermediate variable when you need to use the result of a
 computation multiple times.
 
-For example, without let, you might write:
+For example, without +let+, you might write:
 
   biggest = my_things.find_biggest
   bounds = Bound.new(:width => biggest.width, :height => biggest.height)
 
-with let, this could be:
+with +let+, this could be:
 
   bounds = my_things.find_biggest.let { |biggest|
     Bound.new(:width => biggest.width, :height => biggest.height)
@@ -32,11 +32,11 @@ Alternative implementation at http://ick.rubyforge.org/inside.html
 
 Install via:
 
-   % gem install let
+   % gem install object-let
 
 or in your Gemfile:
 
-   gem "let"
+   gem "object-let"
 
 == Copyright
 

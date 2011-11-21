@@ -4,9 +4,13 @@ require File.expand_path('../lib/let/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["ronen barzel"]
   gem.email         = ["ronen@barzel.org"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Defines Object#let, which yields the object and returns the result}
+  gem.summary       = %q{Defines Object#let, which yields the object and returns the result.  This idiom can be handy to eliminate the need for an intermediate variable when you need to use the result of a computation multiple times.}
+  gem.homepage      = 'http://github.com/ronen/let'
+  gem.extra_rdoc_files = [
+    'LICENSE',
+    'README.rdoc',
+  ]
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
@@ -14,4 +18,8 @@ Gem::Specification.new do |gem|
   gem.name          = "let"
   gem.require_paths = ["lib"]
   gem.version       = Let::VERSION
+
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'simplecov'
+  gem.add_development_dependency 'simplecov-gem-adapter'
 end

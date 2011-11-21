@@ -1,5 +1,4 @@
 require "let/version"
+require "let/object"
 
-module Let
-  # Your code goes here...
-end
+Object.send :include, Let::Object

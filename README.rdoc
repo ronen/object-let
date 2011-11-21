@@ -1,0 +1,44 @@
+= let
+
+Defines Object#let, which simply yields the object and returns the result.
+This idiom, familiar to Lisp programmers, can be handy to eliminate the need
+for an intermediate variable when you need to use the result of a
+computation multiple times.
+
+For example, without let, you might write:
+
+  biggest = my_things.find_biggest
+  bounds = Bound.new(:width => biggest.width, :height => biggest.height)
+
+with let, this could be:
+
+  bounds = my_things.find_biggest.let { |biggest|
+    Bound.new(:width => biggest.width, :height => biggest.height)
+  }
+
+
+Stylistically, as well in terms of lexical scoping (for ruby 1.9), this
+idiom can make clear that the intermediate result is of no importance outside the
+block.
+
+= See also
+
+Discussion at http://www.opensourcery.com/blog/zack-hobson/objectlet-ruby-0
+
+Alternative implementation at http://ick.rubyforge.org/inside.html
+
+
+== Installation
+
+Install via:
+
+   % gem install let
+
+or in your Gemfile:
+
+   gem "let"
+
+== Copyright
+
+Released under the MIT License.  See LICENSE for details.
+

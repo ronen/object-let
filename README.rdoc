@@ -27,6 +27,10 @@ Discussion at http://www.opensourcery.com/blog/zack-hobson/objectlet-ruby-0
 
 Alternative implementation at http://ick.rubyforge.org/inside.html
 
+The "let" gem (https://rubygems.org/gems/let) provides a module that can be
+included in a class to define memoizing accessors.  That gem and this one
+are compatible.
+
 
 == Installation
 

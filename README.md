@@ -69,3 +69,7 @@ or in your Gemfile:
 
 Released under the MIT License.  See LICENSE for details.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ronen/object-let/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

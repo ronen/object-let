@@ -22,7 +22,7 @@ end
 
 shared_examples "let_if" do
   it "should not yield" do
-    expect { subject.let_if { raise "in block"} }.should_not raise_error
+    expect { subject.let_if { raise "in block"} }.to_not raise_error
   end
 
   it "should return nil" do

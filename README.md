@@ -1,7 +1,9 @@
 # object-let
 
-[<img src="https://gemnasium.com/ronen/object-let.png" alt="Dependency Status"
-/>](https://gemnasium.com/ronen/object-let)
+[![Gem Version](https://badge.fury.io/rb/object-let.png)](http://badge.fury.io/rb/object-let)
+[![Build Status](https://secure.travis-ci.org/ronen/object-let.png)](http://travis-ci.org/ronen/object-let)
+[![Dependency Status](https://gemnasium.com/ronen/object-let.png)](https://gemnasium.com/ronen/object-let)
+
 
 Defines `Object#let`, which simply yields the object and returns the result.
 This idiom, familiar to Lisp programmers, can be handy to eliminate the need

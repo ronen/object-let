@@ -4,19 +4,19 @@ shared_examples "let" do
 
   it "should be supported" do
     obj = Object.new
-    obj.should be_respond_to method
+    expect(obj).to be_respond_to method
   end
 
   it "should yield the object" do
     obj = Object.new
     obj.send(method) { |arg|
-      arg.should equal obj
+      expect(arg).to eq obj
     }
   end
 
   it "should return the block result" do
     obj = Object.new
-    obj.send(method) {|arg| 3}.should == 3
+    expect(obj.send(method) {|arg| 3}).to eq 3
   end
 end
 
@@ -26,7 +26,7 @@ shared_examples "let_if" do
   end
 
   it "should return nil" do
-    subject.let_if { 12345 }.should be_nil
+    expect(subject.let_if { 12345 }).to be_nil
   end
 end
 

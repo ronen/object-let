@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.version       = ObjectLet::VERSION
 
   gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'rspec', "~> 3.0"
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'simplecov-gem-adapter'
 end

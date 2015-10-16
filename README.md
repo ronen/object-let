@@ -1,6 +1,6 @@
 # object-let
 
-[![Gem Version](https://badge.fury.io/rb/object-let.png)](http://badge.fury.io/rb/object-let)
+[![Gem Version](https://badge.fury.io/rb/object-let.svg)](https://badge.fury.io/rb/object-let)
 [![Build Status](https://secure.travis-ci.org/ronen/object-let.png)](http://travis-ci.org/ronen/object-let)
 [![Dependency Status](https://gemnasium.com/ronen/object-let.png)](https://gemnasium.com/ronen/object-let)
 
@@ -12,31 +12,39 @@ multiple times.
 
 For example, without `let`, you might write:
 
-    biggest = my_things.find_biggest
-    bounds = Bound.new(:width => biggest.width, :height => biggest.height)
+```ruby
+biggest = my_things.find_biggest
+bounds = Bound.new(:width => biggest.width, :height => biggest.height)
+```
 
 with `let`, this could be:
 
-    bounds = my_things.find_biggest.let { |biggest|
-      Bound.new(:width => biggest.width, :height => biggest.height)
-    }
+```ruby
+bounds = my_things.find_biggest.let { |biggest|
+    Bound.new(:width => biggest.width, :height => biggest.height)
+}
+```
 
-Stylistically, as well in terms of lexical scoping (for ruby 1.9), this idiom
+Stylistically, as well in terms of lexical scoping (for ruby >= 1.9), this idiom
 can make clear that the intermediate result is of no importance outside the
 block.
 
 You can also think of this as analogous to "map" in a method chain, but for a
 single value rather than for an enumerable.  Compare:
 
-    array_of_items = thingy.item_names.map{ |name| Item.new(:name => name) }
-    just_one_item  = thingy.item_name.let { |name| Item.new(:name => name) }
+```ruby
+array_of_items = thingy.item_names.map { |name| Item.new(:name => name) }
+just_one_item  = thingy.item_name.let  { |name| Item.new(:name => name) }
+```
 
 `Object#let_if` behaves like `Object#let` except that it only yields if the
 object is truthy; otherwise it returns nil.  So, modifying the above example:
 
-    bounds = my_things.find_biggest.let_if { |biggest|
-      Bound.new(:width => biggest.width, :height => biggest.height)
-    }
+```ruby
+bounds = my_things.find_biggest.let_if { |biggest|
+    Bound.new(:width => biggest.width, :height => biggest.height)
+}
+```
 
 `bounds` will be nil if `find_biggest` returns nil.
 
@@ -59,17 +67,18 @@ Install via:
 or in your Gemfile:
 
     gem "object-let"
+    
+## Compatibility
+
+The gem is tested on ruby 1.8.7, 1.9.3, 2.0.0, and 2.2.3
 
 ## History
 
-    * 0.1.0 - Add <tt>Object#left_if</tt>
+    * 0.1.0 - Add `Object#let_if`
     * 0.0.1 - Initial version
 
 ## Copyright
 
 Released under the MIT License.  See LICENSE for details.
 
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ronen/object-let/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

@@ -8,7 +8,7 @@
 Defines `Object#let`, which simply yields the object and returns the result.
 This idiom, familiar to Lisp programmers, can be handy to eliminate the need
 for an intermediate variable when you need to use the result of a computation
-multiple times.
+multiple times, or at the tail of a method chain.
 
 For example, without `let`, you might write:
 
@@ -38,8 +38,6 @@ just_one_item  = thingy.item_name.let  { |name| Item.new(:name => name) }
 ```
 
 # See also
-
-Discussion at http://www.opensourcery.com/blog/zack-hobson/objectlet-ruby-0
 
 Alternative implementation at http://ick.rubyforge.org/inside.html
 

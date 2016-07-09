@@ -37,17 +37,6 @@ array_of_items = thingy.item_names.map { |name| Item.new(:name => name) }
 just_one_item  = thingy.item_name.let  { |name| Item.new(:name => name) }
 ```
 
-`Object#let_if` behaves like `Object#let` except that it only yields if the
-object is truthy; otherwise it returns nil.  So, modifying the above example:
-
-```ruby
-bounds = my_things.find_biggest.let_if { |biggest|
-    Bound.new(:width => biggest.width, :height => biggest.height)
-}
-```
-
-`bounds` will be nil if `find_biggest` returns nil.
-
 # See also
 
 Discussion at http://www.opensourcery.com/blog/zack-hobson/objectlet-ruby-0

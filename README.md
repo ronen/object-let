@@ -61,8 +61,11 @@ The gem is tested on ruby 2.1.9, 2.2.5, and 2.3.1
 
 ## History
 
-    * 0.1.0 - Add `Object#let_if`
-    * 0.0.1 - Initial version
+* 1.0.0 - remove `Object#let_if`; on ruby >= 2.3 using `&.let` is cleaner and nearly equivalent (differ only in falsey vs nil).  Drop support for ruby <= 1.9
+
+* 0.1.0 - Add `Object#let_if`
+
+* 0.0.1 - Initial version
 
 ## Copyright
 

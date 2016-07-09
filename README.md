@@ -25,7 +25,7 @@ bounds = my_things.find_biggest.let { |biggest|
 }
 ```
 
-Stylistically, as well in terms of lexical scoping (for ruby >= 1.9), this idiom
+Stylistically, as well in terms of lexical scoping, this idiom
 can make clear that the intermediate result is of no importance outside the
 block.
 
@@ -59,7 +59,7 @@ or in your Gemfile:
     
 ## Compatibility
 
-The gem is tested on ruby 1.8.7, 1.9.3, 2.0.0, and 2.2.3
+The gem is tested on ruby 2.1.9, 2.2.5, and 2.3.1
 
 ## History
 

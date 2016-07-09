@@ -1,8 +1,6 @@
-if RUBY_VERSION > "1.9"
-  require 'simplecov'
-  require 'simplecov-gem-adapter'
-  SimpleCov.start 'gem'
-end
+require 'simplecov'
+require 'simplecov-gem-profile'
+SimpleCov.start 'gem'
 
 require 'rspec'
 require 'object-let'
